@@ -1,0 +1,63 @@
+/* index.css */
+body {
+  overflow-x: hidden;
+}
+
+#app-wrapper {
+  transition: margin-left 0.3s;
+}
+
+#page-content-wrapper {
+  min-width: 100vw;
+  padding: 15px;
+  margin-left: 240px;
+}
+
+#sidebar-wrapper {
+  min-height: 100vh;
+  margin-right: -15rem;
+  /* padding-right: 15rem; */
+  transition: margin-right 0.3s ease-in-out;
+}
+
+#sidebar-wrapper .sidebar-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Defina a cor de fundo aqui */
+.bg-color-sidebar {
+  background-color: rgb(27, 153, 153) !important;
+}
+
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
+}
+
+#sidebar-wrapper .list-group {
+  width: 15rem;
+}
+
+#sidebar-wrapper .bi {
+  margin-right: 0.5rem;
+}
+
+#sidebar-wrapper .list-group-item {
+  border: none;
+  transition: background-color 0.3s ease !important;
+}
+
+#sidebar-wrapper .list-group-item:hover {
+  background-color: rgba(47, 204, 154, 0.648) !important; /* Aqui você pode ajustar o nível de transparência desejado */
+}
+
+/* Esconder o menu lateral quando estiver inativo */
+#app-wrapper:not(.sidebar-active) #sidebar-wrapper {
+  margin-right: -15rem;
+}
+
+#bglist{
+  background-color: rgb(27, 153, 153) !important;
+}

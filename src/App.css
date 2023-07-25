@@ -1,0 +1,17 @@
+body {
+  overflow-x: hidden;
+}
+
+#app-wrapper {
+  transition: margin-left 0.3s;
+}
+
+#page-content-wrapper {
+  min-width: 100vw;
+  padding: 15px;
+}
+
+/* Esconder o menu lateral quando estiver inativo */
+#app-wrapper:not(.sidebar-active) #sidebar-wrapper {
+  margin-right: -15rem;
+}
