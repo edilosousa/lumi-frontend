@@ -1,22 +1,17 @@
-/* index.css */
-body {
-  overflow-x: hidden;
-}
-
+/* Sidebar.css */
 #app-wrapper {
   transition: margin-left 0.3s;
 }
 
 #page-content-wrapper {
-  min-width: 100vw;
+  min-width: 85%; /* Conteúdo ocupa 90% da tela */
   padding: 15px;
-  margin-left: 240px;
 }
 
 #sidebar-wrapper {
   min-height: 100vh;
-  /* margin-right: -10rem; */
-  transition: margin-right 0.3s ease-in-out;
+  width: 15%; /* Sidebar ocupa 10% da tela */
+  transition: width 0.3s ease-in-out;
 }
 
 #sidebar-wrapper .sidebar-container {
@@ -25,22 +20,22 @@ body {
   flex-direction: column;
 }
 
-/* Defina a cor de fundo aqui */
 .bg-color-sidebar {
   background-color: rgb(27, 153, 153) !important;
 }
 
 #sidebar-wrapper .sidebar-heading {
-  padding: 0.875rem 1.25rem;
+  padding: 0.875rem 4.25rem;
   font-size: 1.2rem;
-}
-
-#sidebar-wrapper .list-group {
-  width: 15rem;
+  background-color: rgb(179, 240, 220);
 }
 
 #sidebar-wrapper .bi {
   margin-right: 0.5rem;
+}
+
+#sidebar-wrapper .list-group {
+  margin-top: 20px;
 }
 
 #sidebar-wrapper .list-group-item {
@@ -48,15 +43,14 @@ body {
   transition: background-color 0.3s ease !important;
 }
 
+#bglist{
+  background-color: rgb(27, 153, 153) !important;
+}
+
 #sidebar-wrapper .list-group-item:hover {
   background-color: rgba(47, 204, 154, 0.648) !important; /* Aqui você pode ajustar o nível de transparência desejado */
 }
 
-/* Esconder o menu lateral quando estiver inativo */
-#app-wrapper:not(.sidebar-active) #sidebar-wrapper {
-  margin-right: -15rem;
-}
-
-#bglist{
-  background-color: rgb(27, 153, 153) !important;
+.card {
+  height: 250px
 }

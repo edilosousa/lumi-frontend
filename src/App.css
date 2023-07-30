@@ -15,3 +15,11 @@ body {
 #app-wrapper:not(.sidebar-active) #sidebar-wrapper {
   margin-right: -15rem;
 }
+
+.card {
+  background-color: red;
+}
+
+.bg-color {
+  background-color: red;
+}

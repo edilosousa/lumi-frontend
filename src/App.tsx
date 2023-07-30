@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import { BrowserRouter as Router, Route, Link, Routes, RouteProps } from 'react-router-dom';
 import Dashboard from './pages/dashboard/dashboard';
-import LancamentoFaturas from './pages/lancamento/lancamento';
+import HistoricoFaturas from './pages/historico-faturas/historico-faturas';
 import Sidebar from './components/Sidebar';
 import './components/Sidebar.css';
 
@@ -21,7 +21,7 @@ const App: React.FC = () => {
         <div id="page-content-wrapper">
           <Routes>
             <Route path="/" element={<Dashboard/>} />
-            <Route path="/lancamento" element={<LancamentoFaturas />} />
+            <Route path="/historico-faturas" element={<HistoricoFaturas />} />
           </Routes>
         </div>
       </div>

@@ -10,8 +10,8 @@ const Sidebar: React.FC = () => {
         <a href="/" className="list-group-item list-group-item-action text-white" id="bglist">
           <i className="bi bi-house-door"></i> Dashboard
         </a>
-        <a href="/lancamento" className="list-group-item list-group-item-action text-white" id="bglist">
-          <i className="bi bi-file-earmark-text"></i> Faturas
+        <a href="/historico-faturas" className="list-group-item list-group-item-action text-white" id="bglist">
+          <i className="bi bi-file-earmark-text"></i> Histórico de Faturas
         </a>
       </div>
     </div>
