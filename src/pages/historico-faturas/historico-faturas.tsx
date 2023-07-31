@@ -1,6 +1,7 @@
 import React, { useEffect, useState} from 'react';
 import axios from 'axios';
 import { Fatura } from '../../interfaces/Fatura';
+import UploadFaturas from '../../components/UploadFaturas';
 
 
 const HistoricoFaturas: React.FC = () => {
@@ -17,33 +18,51 @@ const HistoricoFaturas: React.FC = () => {
       });
   }, []);
 
+  // Callback function to be passed to UploadFaturas
+  const handleUploadSuccess = () => {
+    // Fetch updated data after successful upload
+    axios
+      .get('http://localhost:3000/faturas')
+      .then((response) => {
+        setFaturas(response.data);
+      })
+      .catch((error) => {
+        console.error('Erro ao buscar as faturas:', error);
+      });
+  };
+
   return (
     <div>
       <h4>Histórico de faturas</h4>
       <hr/>
-      <div className="table-responsive">
-           <table className="table table-bordered table-hover">
-             <thead className='bg-color'>
-               <tr>
-                 <th>ID</th>
-                 <th>UC Cliente</th>
-                 <th>Mês Fatura</th>
-                 <th>Data Vencimento</th>
-                 <th>Preço Energia Elétrica</th>
-                 <th>QTD KWH En. Elétrica</th>
-                 <th>Valor En. Elétrica</th>
-                 <th>Preço Energia HFP</th>
-                 <th>QTD KWH En. HFP</th>
-                 <th>Valor En. HFP</th>
-                 <th>Preço En. Compe.</th>
-                 <th>QTD KWH En. Compe.</th>
-                 <th>Valor En. Compe.</th>
-                 <th>Valor En. Publica</th>
-                 <th>Total Fatura</th>
-             </tr>
-           </thead>
-           <tbody>
-             {faturas.map(fatura => (
+      <div className='row'>
+        <div className='col-sm-12'>
+          <UploadFaturas onUploadSuccess={handleUploadSuccess}/>
+        </div>
+      </div>
+        <div className="table-responsive mt-5">
+          <table className="table table-hover table-w">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>UC Cliente</th>
+                  <th>Mês Fatura</th>
+                  <th>Data Vencimento</th>
+                  <th>Preço Energia Elétrica</th>
+                  <th>QTD KWH En. Elétrica</th>
+                  <th>Valor En. Elétrica</th>
+                  <th>Preço Energia HFP</th>
+                  <th>QTD KWH En. HFP</th>
+                  <th>Valor En. HFP</th>
+                  <th>Preço En. Compe.</th>
+                  <th>QTD KWH En. Compe.</th>
+                  <th>Valor En. Compe.</th>
+                  <th>Valor En. Publica</th>
+                  <th>Total Fatura</th>
+              </tr>
+            </thead>
+            <tbody>
+              {faturas.map(fatura => (
                 <tr key={fatura.idfatura}>
                   <td>{fatura.idfatura}</td>
                   <td>{fatura.uccliente}</td>
@@ -66,39 +85,6 @@ const HistoricoFaturas: React.FC = () => {
           </table>
         </div>
     </div>
-    // <div className='container'>
-    //   <div className='row'>
-    //     <div className='col-sm-12'>
-          
-    //     </div>
-    //   </div>
-    //   <div className='row'>
-    //     <div className="table-responsive">
-    //       <table className="table table-bordered table-hover">
-    //         <thead>
-    //           <tr>
-    //             <th>ID Fatura</th>
-    //             <th>UC Cliente</th>
-    //             <th>Mês Fatura</th>
-    //             <th>Data Vencimento</th>
-    //             {/* Adicione mais colunas aqui para as outras propriedades */}
-    //           </tr>
-    //         </thead>
-    //         <tbody>
-    //           {faturas.map(fatura => (
-    //             <tr key={fatura.idfatura}>
-    //               <td>{fatura.idfatura}</td>
-    //               <td>{fatura.uccliente}</td>
-    //               <td>{fatura.mesfatura}</td>
-    //               <td>{fatura.datavencimentofatura}</td>
-    //               {/* Renderize outras colunas aqui */}
-    //             </tr>
-    //           ))}
-    //         </tbody>
-    //       </table>
-    //     </div>
-    //   </div>
-    // </div>
   );
 };
 

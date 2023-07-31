@@ -11,3 +11,30 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.custom-card {
+  height: 150px; /* Ajuste a altura conforme necessário */
+}
+
+.table-responsive{
+  overflow-x: scroll;
+}
+
+.table-w{
+  font-size: 12px;
+  width: 2000px;
+}
+
+.table-w thead th{
+  background-color: rgb(27, 153, 153) !important;
+  color: white;
+}
+
+.file-color {
+background-color: rgb(27, 153, 153) !important;
+}
+.h-fatura {
+  background-color: rgb(213, 225, 227);
+  height: 100px;
+  overflow-y: scroll;
+}

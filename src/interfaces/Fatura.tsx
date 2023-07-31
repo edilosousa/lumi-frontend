@@ -6,7 +6,7 @@ export interface Fatura {
     qtdkwhenergiaeletricafatura: number
 	qtdkwhenergiainjetadafatura: number
 	qtdkwhenergiacompensadafatura: number
-	valorenergiaeletricafaturaFormatado: number
+	valorenergiaeletricafaturaFormatado: string
 	valorenergiainjetadafaturaFormatado: number
 	valorenergiacompensadafaturaFormatado: number
 	valoriluminacaopublicafaturaFormatado: number
