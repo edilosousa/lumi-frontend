@@ -25,3 +25,5 @@ Aqui abaixo alguns prints das telas:
 
 
  ### - Tive problemas em hospedar arquivos tanto no S3 da aws quanto no CYCLIC e na Railway, não mostrará os dados em tempo de execução e sim ja dados salvos no banco, a idéia é era no historico de faturas eu pegar as faturas fazer o upload para uma pasta fazer essa leitura e salvar no banco de dados em seguida mostrar no projeto os seus dados.
+
+ ### - Posso mostrar localmente isso funcionando.
