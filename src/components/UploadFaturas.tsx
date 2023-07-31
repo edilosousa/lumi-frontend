@@ -32,7 +32,7 @@ const UploadFaturas: React.FC<UploadFaturasProps> = ({ onUploadSuccess }) => {
         formData.append('pdfFiles', pdfFile.file);
       });
   
-      axios.post('http://localhost:3000/faturas/upload', formData)
+      axios.post('https://api-backend-lumi.cyclic.app/faturas/upload', formData)
         .then((response) => {
           console.log(response.data);
           if (response.data.message === 'Success') {
