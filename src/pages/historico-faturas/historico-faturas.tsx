@@ -9,7 +9,7 @@ const HistoricoFaturas: React.FC = () => {
 
   useEffect(() => {
     // Fetch das faturas da rota
-    axios.get('https://api-backend-lumi.cyclic.app/faturas')
+    axios.get('http://localhost:3000/faturas')
       .then(response => {
         setFaturas(response.data);
       })
@@ -22,7 +22,7 @@ const HistoricoFaturas: React.FC = () => {
   const handleUploadSuccess = () => {
     // Fetch updated data after successful upload
     axios
-      .get('https://api-backend-lumi.cyclic.app/faturas')
+      .get('http://localhost:3000/faturas')
       .then((response) => {
         setFaturas(response.data);
       })
