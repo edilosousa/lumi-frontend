@@ -118,12 +118,12 @@ const Dashboard: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="row mt-2">
+      <div className="row">
         <div className="col-md-12">
           <div className="card">
           <div className='card-header file-color'>Consumo de Energia Compensada s/ ICMS</div>
             <div className="card-body">
-              <canvas ref={chartRefCompensada} id="graficoEnergiaCompensada" width="400" height="150"></canvas>
+              <canvas ref={chartRefCompensada} id="graficoEnergiaCompensada" width="400" height="100%"></canvas>
             </div>
           </div>
         </div>

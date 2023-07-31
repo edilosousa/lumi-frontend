@@ -36,7 +36,7 @@ const UploadFaturas: React.FC<UploadFaturasProps> = ({ onUploadSuccess }) => {
         .then((response) => {
           console.log(response.data);
           if (response.data.message === 'Success') {
-            Swal.fire('Success!', 'File uploaded successfully!', 'success');
+            Swal.fire('Success!', 'Dados das faturas salvas no banco de dados!', 'success');
             onUploadSuccess();
           }
         })
