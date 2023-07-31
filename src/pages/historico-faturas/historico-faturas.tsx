@@ -64,9 +64,9 @@ const HistoricoFaturas: React.FC = () => {
             <tbody>
               {faturas.map(fatura => (
                 <tr key={fatura.idfatura}>
-                  <td>{fatura.idfatura}</td>
-                  <td>{fatura.uccliente}</td>
-                  <td>{fatura.mesfatura}</td>
+                  <td className='ucColor'>{fatura.idfatura}</td>
+                  <td className='ucColor'>{fatura.uccliente}</td>
+                  <td className='ucColor'>{fatura.mesfatura}</td>
                   <td>{fatura.datavencimentofatura}</td>
                   <td>{fatura.precoenergiaeletricafaturaFormatado}</td>
                   <td>{fatura.qtdkwhenergiaeletricafatura}</td>
